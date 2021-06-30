@@ -23,6 +23,9 @@ router.get('/:id', (req, res) => {
     } 
     });
 });
+router.get('/:id/edit', (req, res) => {
+    // edit form
+});
 
 router.put('/:id', (req, res) => {
     let id = req.params.id;
