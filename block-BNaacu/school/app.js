@@ -14,7 +14,7 @@ const app = express();
 
 // Built-in Middlewares
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: false }));
 
 // Setup View Engine
 
@@ -25,6 +25,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/', indexRouter);
 app.use('/students', studentsRouter);
 
+// Error Handling Middleware
+app.use((req, res, next) => {
+    res.status(404);
+    res.send('Error 404: Page Not Found');
+});
 
 
 // Listener Middleware
