@@ -30,7 +30,7 @@ router.get('/:id', (req, res, next) => {
         res.render('singleUser', { user: user});
     });
 });
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', (req, res, next) => {
     let id = req.params.id;
     User.findById(id, (err, user) =>  {
         if(err) return next(err);
@@ -38,7 +38,7 @@ router.get('/:id/edit', (req, res) => {
     });
 });
 
-router.post('/:id', (req, res) => {
+router.post('/:id', (req, res, next) => {
     let id = req.params.id;
     User.findByIdAndUpdate(id, req.body, (err, updatedUser) => {
         if(err) return next(err);
