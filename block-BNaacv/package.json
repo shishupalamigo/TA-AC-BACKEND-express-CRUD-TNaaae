@@ -1,8 +1,7 @@
 {
   "name": "altcampus-assignment",
   "version": "1.0.0",
-  "description": "",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
     "start": "node ./user-diary/app.js"
@@ -14,5 +13,8 @@
     "express": "^4.17.1",
     "jest": "^26.0.1",
     "mongoose": "^5.13.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
 }

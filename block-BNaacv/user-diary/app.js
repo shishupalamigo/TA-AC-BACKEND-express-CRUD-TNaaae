@@ -4,7 +4,7 @@ const path = require('path');
 const usersRouter = require('./routes/users');
 
 // Connect to MongoDB database
-mongoose.connect('mongodb://localhost:27017/blog', { useNewUrlParser: true,  useUnifiedTopology: true}, (err) => {
+mongoose.connect('mongodb://localhost:27017/user-diary', { useNewUrlParser: true,  useUnifiedTopology: true}, (err) => {
     console.log(err ? err : 'Connected to  Database');
 });
 
