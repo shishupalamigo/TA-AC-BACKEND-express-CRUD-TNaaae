@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single User</title>
+</head>
+<body>
+    <h2>Single User Info</h2>
+    <h3><%= user.name %></h3>
+    <h5><%= user.email %></h5>
+    <p><%= user.age %></p>
+    <a href="/users/<%= user.id %>/edit">
+        <button>Edit User</button>
+    </a>
+    <a href="/users/<%= user.id %>/delete">
+        <button>Delete User</button>
+    </a>
+    <a href="/users">
+        <button>Home</button>    
+    </a>
+</body>
+</html>
