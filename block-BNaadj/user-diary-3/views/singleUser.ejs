@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single User</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1>Single User Info</h1>
+    <h3>Name: <%= user.name %></h3>
+    <h5>Email: <%= user.email %></h5>
+    <p>Age: <%= user.age %></p>
+    <p>Address: <%= user.address %></p>
+
+    <p>Bio: <%= user.bio %></p>
+    <p>Hobbies: <% user.hobbies.forEach(e => { %>
+        <span><%= e %></span>
+    <% }) %></p>
+    <div class="btn-container">
+        <a href="/users/<%= user.id %>/edit">
+            <button>Edit User</button>
+        </a>
+        <a href="/users/<%= user.id %>/delete">
+            <button>Delete User</button>
+        </a>
+        <a href="/users">
+            <button>Home</button>    
+        </a>
+    </div>
+</body>
+</html>
